@@ -374,15 +374,15 @@ void GT_InitGametype()
         config = "// '" + gametype.title + "' gametype configuration file\n"
                  + "// This config will be executed each time the gametype is started\n"
                  + "\n\n// map rotation\n"
-                 + "set g_maplist \"wctf1 wctf3 wctf4 wctf5 wctf6\" // list of maps in automatic rotation\n"
-                 + "set g_maprotation \"1\"   // 0 = same map, 1 = in order, 2 = random\n"
+                 + "set g_maplist \"raketliga_slide\" // list of maps in automatic rotation\n"
+                 + "set g_maprotation \"0\"   // 0 = same map, 1 = in order, 2 = random\n"
                  + "\n// game settings\n"
                  + "set g_scorelimit \"0\"\n"
                  + "set g_timelimit \"20\"\n"
                  + "set g_warmup_timelimit \"1\"\n"
                  + "set g_match_extendedtime \"5\"\n"
-                 + "set g_allow_falldamage \"1\"\n"
-                 + "set g_allow_selfdamage \"1\"\n"
+                 + "set g_allow_falldamage \"0\"\n"
+                 + "set g_allow_selfdamage \"0\"\n"
                  + "set g_allow_teamdamage \"0\"\n"
                  + "set g_allow_stun \"1\"\n"
                  + "set g_teams_maxplayers \"5\"\n"
@@ -390,7 +390,7 @@ void GT_InitGametype()
                  + "set g_countdown_time \"5\"\n"
                  + "set g_maxtimeouts \"3\" // -1 = unlimited\n"
                  + "set g_challengers_queue \"0\"\n"
-                 + "set ctf_powerupDrop \"0\"\n"
+                 + "set g_instagib \"0\"\n"
                  + "\necho \"" + gametype.name + ".cfg executed\"\n";
 
         G_WriteFile( "configs/server/gametypes/" + gametype.name + ".cfg", config );
